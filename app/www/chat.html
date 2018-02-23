@@ -1,0 +1,14 @@
+<ons-page id="chat">
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center"></div>
+  </ons-toolbar>
+  <input type="hidden" id="channelId" />
+  <div class="chat-area">
+    <ons-list id="chats"></ons-list>
+  </div>
+  <div class="send-area">
+    <ons-input id="message" placeholder="メッセージ"></ons-input>
+    <ons-button onclick="send()" modifier="quiet">送信</ons-button>
+  </div>
+</ons-page>
