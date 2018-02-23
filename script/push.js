@@ -2,17 +2,17 @@ const crypto  = require("crypto");
 const request = require('superagent');
 const NCMB    = require('ncmb');
 module.exports = (req, res) => {  
-    const applicationKey = 'd288714a5a801f4ccaaac99c87df41d35e38b5804a9ecbcd2026c1901e914fc0';
-    const clientKey = '3395ea58a34af1edb5009c9d15b3379761539ef3c8eb0ee0d797274e122359b8';
+    const applicationKey = 'YOUR_APPLICATION_KEY';
+    const clientKey = 'YOUR_CLIENT_KEY';
     saveDataStore(
         applicationKey,
         clientKey,
         req.body
     ).then(() => {
         return sendPusher(
-            '443a8868e3321344be81',
-            'fc4056e7e6cb5610a212',
-            148932,
+            'YOUR_PUSHER_AUTH_KEY',
+            'YOUR_PUSHER_SECRET_KEY',
+            'YOUR_PUSHER_APP_ID',
             req.body
         )
     })
